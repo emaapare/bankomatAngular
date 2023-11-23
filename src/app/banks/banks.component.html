@@ -1,0 +1,39 @@
+<div class="header-container">
+  <h2>Lista banche disponibili</h2>
+  
+  <button class="back-button" routerLink="/home">Indietro</button>
+  
+</div>
+<!-- <div *ngIf="banks">
+  <h2>Lista banche disponibili</h2>
+  <h4 *ngFor="let bank of banks">
+    <button class="bank" routerLink="/login">
+        {{bank.nome}}
+    </button>
+  </h4>
+</div>
+
+<div *ngIf="!banks">
+  <p>nessun banca disponibile</p>
+</div> -->
+
+<table>
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nome Banca</th>
+      <th class="azioni">Azioni</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let bank of banks">
+      <td>{{ bank.id }}</td>
+      <td>{{ bank.nome }}</td>
+      <td>
+        <button class="modifica" (click)="visualizzaFunzionalita(bank.id)">Visualizza funzionalità banca</button>
+        &nbsp;
+        <button class="modifica" (click)="modificaBanca(bank.id)">Modifica funzionalità banca</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

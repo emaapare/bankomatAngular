@@ -1,0 +1,34 @@
+<div class="header-container">
+  <h2>Gestione utenti</h2>
+  
+  <button class="back-button" routerLink="/home">Indietro</button>
+  
+</div>
+<button class="aggiungi" routerLink="/add-user">Inserisci Utente</button>
+  <table>
+    <thead>
+      <tr>
+        <th class="bankId">Id banca</th>
+        <th class="nomeBanca">Nome banca</th>
+        <th class="nomeUtente">Nome Utente</th>
+        <th class="bloccato">Bloccato</th>
+        <th class="azioni">Azioni</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user["Id Banca"] }}</td>
+        <td>{{ getBankName(user["Id Banca"]) }}</td>
+        <td>{{ user["Nome Utente"] }}</td>
+        <td>{{ user.Stato }}</td>
+        <td>
+          <button class="modifica" (click)="modificaPasswordUtente(user.Id)">Modifica password</button>
+          &nbsp;
+          <button class="modifica" (click)="modificaBloccatoUtente(user.Id)">Modifica bloccato</button>
+          &nbsp;
+          <button class="cancella" (click)="cancellaUtente(user)">Cancella</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- <button class="aggiungi" routerLink="/add-user">Inserisci Utente</button> -->

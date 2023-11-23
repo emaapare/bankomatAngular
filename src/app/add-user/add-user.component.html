@@ -1,0 +1,28 @@
+<div class="header-container">
+<h2>aggiungi nuovo utente</h2>
+<button class="back-button" routerLink="/gestione-utenti">Indietro</button>
+</div>
+
+<div>
+    <label for="[Nome Utente]">Nome Utente:</label><br>
+    <input type="text" id="nomeUtente" [(ngModel)]="nuovoUtente['Nome Utente']" required>
+    
+    <br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" [(ngModel)]="nuovoUtente.Password" required>
+    
+    <br>
+    <label for="Stato">Stato:</label><br>
+    <input readonly="text" type="boolean" id="stato" [(ngModel)]="nuovoUtente.Stato" required>
+  
+    <br>
+      
+    <label for="idBanca">Id Banca:</label><br>
+    <select id="idBanca" [(ngModel)]="nuovoUtente['Id Banca']">
+      <option value="bank.id" *ngFor="let bank of banks">{{bank.id}} - {{bank.nome}}</option>
+    </select>
+
+    <br>
+    <button (click)="aggiungiUtente()">Aggiungi Utente</button>
+  </div>
+  

@@ -1,0 +1,108 @@
+/* button {
+    width: 15%;
+    margin-top: 20px;
+    background-color: #eee;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+    background-color: #cfd8dc;
+}
+
+button:disabled {
+    background-color: #eee;
+    color: #ccc;
+    cursor: auto;
+} */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .back-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  thead {
+    background-color: #f2f2f2;
+  }
+  
+  th, td {
+    padding: 12px;
+    width: 20%;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .azioni{
+    width: 5%;
+  }
+  
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #2980b9;
+  }
+
+  button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  button.modifica {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  button.cancella {
+    background-color: #e36c5f;
+    color: #fff;
+  }
+
+  button.aggiungi{
+    background-color: #4CAF50;
+    color: #fff;
+  }
+  
+  button:hover {
+    filter: brightness(1.1);
+  }
+
+
+.bank{
+    font-weight: 600;
+}

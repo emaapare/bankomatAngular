@@ -1,0 +1,22 @@
+<div>
+    <div class="header-container">
+        <h2>Funzionalità della banca (ID: {{ bankId }})</h2>
+        <button class="back-button" routerLink="/banks">Indietro</button>
+    </div>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID Funzionalità</th>
+          <th>Nome Funzionalità</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let functionality of functionalities">
+          <td>{{ functionality.id }}</td>
+          <td>{{ functionality.nome }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

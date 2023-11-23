@@ -1,0 +1,24 @@
+<div *ngIf="userId">
+    <div class="header-container">
+        <h2>Modifica stato ( {{selectedUser["Nome Utente"]}} )</h2>
+        <button class="back-button" routerLink="/gestione-utenti">Indietro</button>
+      </div>
+    
+    <label for="newPassword">Nuovo stato:</label>
+    <br><br>
+    <select id="nuovoStato" [(ngModel)]="bloccato">
+        <option value="true">true</option>
+        <option value="false">false</option>
+      </select>
+    
+    <br>
+    <button (click)="modificaBloccato()">Modifica stato</button>
+    <div *ngIf="modificaRiuscita==true" class="messaggio-conferma">
+        {{ confermaMessage }}
+    </div>
+    <div *ngIf="modificaRiuscita==false" class="messaggio-fallito">
+        {{ confermaMessage }}
+    </div>
+</div>
+
+  

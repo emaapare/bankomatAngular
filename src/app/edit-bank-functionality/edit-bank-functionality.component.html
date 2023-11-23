@@ -1,0 +1,27 @@
+<div>
+    <div class="header-container">
+      <h2>Modifica funzionalità della banca (ID: {{ bankId }})</h2>
+      <button class="back-button" routerLink="/banks">Indietro</button>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>ID Funzionalità</th>
+          <th>Nome Funzionalità</th>
+          <th>Attiva/Disattiva</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let functionality of allFunctionalities">
+          <td>{{ functionality.id }}</td>
+          <td>{{ functionality.nome }}</td>
+          <td>
+            <input type="checkbox" [checked]="isFunctionalityActive(functionality)" (change)="attivaDisattivaFunzionalita(functionality)">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- <button (click)="saveSelectedFunctionalities()">Salva</button> -->
+  </div>
+  
